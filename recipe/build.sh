@@ -76,4 +76,5 @@ make
 # For more details see here ( https://llvm.org/bugs/show_bug.cgi?id=21083 ).
 # Also, these tests are very intensive, which makes them challenging to run in CI.
 #eval ${LIBRARY_SEARCH_VAR}=$PREFIX/lib make check
+eval ${LIBRARY_SEARCH_VAR}=$PREFIX/lib make check_python
 make install
