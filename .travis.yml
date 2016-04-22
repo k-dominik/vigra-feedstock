@@ -17,20 +17,21 @@ env:
     - secure: "0MgB7qcuHOFpMGdK/hrHLCamqA06Jdns5BO8ChhHjl0IaBzcG0KFWAlzu8OW9L3q79vX9Sxtf23t1fB2s4O6UduHoFaxZd4OVoxIx/zvWbYurwQ5v+jOSwrL70hjEIwwU2YNmT7VRv/rtN7cM1e98scXm5Snuu1hx4T0wo97GXQjPI+9dMlDQlqpLc8t5vdfugz7//fP176/PHdy2WvJhC4GIPuJgXU0Zosp3kQMIddSrTkO5ewdLxgMIMkd/92fwzM5pbwhcVtn7DUDZD7D4Q0bXj3/N9kYnGSBSTe/uupb0/vZg/232V5CFs98q1Dq19/7uaXp1WwAFXMHRBgHIZZD16yzTFmB/OXlRcoKB5rUtER0no5H/wKwFv2H3Y5oTuQKcRq/HceLoMUxy4/9+PNGgIUz0YtB1N0dHe6xd6neppwBrHrX/jtCIjq+D8Xey3ZWK3pHqfIsRp62mhw5VnBEHmRCWQfBMspF3gmrGs53B+MrdlU8gKMyHBtRypGBjq6DQN/h4Ae5gXPr/h1pmvuF7z1DidOjSaH/7svqC9fFPvqWInYru9b4IorfmA+jes/y+5BkmCjsWh27Z8wla5YDu6NZhZLiaB3ayYOx+dZNHakd86bJWt1sQpz6Bpn7Ta1pAj7cqCr342I+xOBOhEuAUNFkcWh4r3p9NMzzHuc="
 
 
-before install:
+before_install:
     - brew remove --force $(brew list)
 
 install:
     - |
       MINICONDA_URL="http://repo.continuum.io/miniconda"
       MINICONDA_FILE="Miniconda3-latest-MacOSX-x86_64.sh"
-      wget "${MINICONDA_URL}/${MINICONDA_FILE}"
+      curl -O "${MINICONDA_URL}/${MINICONDA_FILE}"
       bash $MINICONDA_FILE -b
 
       export PATH=/Users/travis/miniconda3/bin:$PATH
 
+      conda config --set show_channel_urls true
       conda update --yes conda
-      conda install --yes conda-build jinja2 anaconda-client
+      conda install --yes conda-build=1.20.0 jinja2 anaconda-client
       conda config --add channels conda-forge
       
 
