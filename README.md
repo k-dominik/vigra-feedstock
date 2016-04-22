@@ -5,7 +5,7 @@ Home: http://ukoethe.github.io/vigra
 
 Package license: MIT
 
-Feedstock license: BSD
+Feedstock license: BSD 3-Clause
 
 Summary: Generic Programming for Computer Vision
 
