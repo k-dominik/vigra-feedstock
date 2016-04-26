@@ -12,7 +12,7 @@ source:
 
 build:
   skip: true  # [win]
-  number: 2
+  number: 3
   detect_binary_files_with_prefix: true
 
 requirements:
@@ -22,7 +22,7 @@ requirements:
     - python
     - nose
     - numpy x.x
-    - jpeg 8d
+    - jpeg 9*
     - libtiff 4.0.*
     - libpng 1.6*
     - fftw
@@ -34,7 +34,7 @@ requirements:
     - libgcc      # [linux]
     - python
     - numpy x.x
-    - jpeg 8d
+    - jpeg 9*
     - libtiff 4.0.*
     - libpng 1.6*
     - fftw
