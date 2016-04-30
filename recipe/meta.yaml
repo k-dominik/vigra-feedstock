@@ -12,12 +12,11 @@ source:
 
 build:
   skip: true  # [win]
-  number: 3
+  number: 4
   detect_binary_files_with_prefix: true
 
 requirements:
   build:
-    - gcc         # [linux]
     - cmake
     - python
     - nose
@@ -31,7 +30,6 @@ requirements:
     - zlib 1.2*
     
   run:
-    - libgcc      # [linux]
     - python
     - numpy x.x
     - jpeg 9*
