@@ -12,7 +12,7 @@ source:
 
 build:
   skip: true  # [win]
-  number: 4
+  number: 5
   detect_binary_files_with_prefix: true
 
 requirements:
@@ -26,7 +26,7 @@ requirements:
     - libpng 1.6*
     - fftw
     - hdf5 1.8.15*
-    - boost 1.60*
+    - boost 1.60.*
     - zlib 1.2*
     
   run:
@@ -37,7 +37,7 @@ requirements:
     - libpng 1.6*
     - fftw
     - hdf5 1.8.15*
-    - boost 1.60*
+    - boost 1.60.*
     - zlib 1.2*
 
 test:
