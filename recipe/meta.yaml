@@ -12,7 +12,7 @@ source:
 
 build:
   skip: true  # [win]
-  number: 7
+  number: 8
   detect_binary_files_with_prefix: true
 
 requirements:
@@ -26,8 +26,8 @@ requirements:
     - libpng 1.6*
     - fftw
     - hdf5 1.8.17|1.8.17.*
-    - boost 1.61.*
-    - zlib 1.2*
+    - boost 1.62.*
+    - zlib 1.2.*
     
   run:
     - python
@@ -37,8 +37,8 @@ requirements:
     - libpng 1.6*
     - fftw
     - hdf5 1.8.17|1.8.17.*
-    - boost 1.61.*
-    - zlib 1.2*
+    - boost 1.62.*
+    - zlib 1.2.*
 
 test:
   imports:
