@@ -42,12 +42,12 @@ cmake ..\
         -DDEPENDENCY_SEARCH_PREFIX=${PREFIX} \
 \
         -DFFTW3F_INCLUDE_DIR=${PREFIX}/include \
-        -DFFTW3F_LIBRARY=${PREFIX}/lib/libfftw3f.${SHLIB_EXT} \
+        -DFFTW3F_LIBRARY=${PREFIX}/lib/libfftw3f${SHLIB_EXT} \
         -DFFTW3_INCLUDE_DIR=${PREFIX}/include \
-        -DFFTW3_LIBRARY=${PREFIX}/lib/libfftw3.${SHLIB_EXT} \
+        -DFFTW3_LIBRARY=${PREFIX}/lib/libfftw3${SHLIB_EXT} \
 \
-        -DHDF5_CORE_LIBRARY=${PREFIX}/lib/libhdf5.${SHLIB_EXT} \
-        -DHDF5_HL_LIBRARY=${PREFIX}/lib/libhdf5_hl.${SHLIB_EXT} \
+        -DHDF5_CORE_LIBRARY=${PREFIX}/lib/libhdf5${SHLIB_EXT} \
+        -DHDF5_HL_LIBRARY=${PREFIX}/lib/libhdf5_hl${SHLIB_EXT} \
         -DHDF5_INCLUDE_DIR=${PREFIX}/include \
 \
         -DBoost_INCLUDE_DIR=${PREFIX}/include \
@@ -57,16 +57,16 @@ cmake ..\
         -DPYTHON_INCLUDE_PATH=${PREFIX}/include \
 \
         -DZLIB_INCLUDE_DIR=${PREFIX}/include \
-        -DZLIB_LIBRARY=${PREFIX}/lib/libz.${SHLIB_EXT} \
+        -DZLIB_LIBRARY=${PREFIX}/lib/libz${SHLIB_EXT} \
 \
-        -DPNG_LIBRARY=${PREFIX}/lib/libpng.${SHLIB_EXT} \
+        -DPNG_LIBRARY=${PREFIX}/lib/libpng${SHLIB_EXT} \
         -DPNG_PNG_INCLUDE_DIR=${PREFIX}/include \
 \
-        -DTIFF_LIBRARY=${PREFIX}/lib/libtiff.${SHLIB_EXT} \
+        -DTIFF_LIBRARY=${PREFIX}/lib/libtiff${SHLIB_EXT} \
         -DTIFF_INCLUDE_DIR=${PREFIX}/include \
 \
         -DJPEG_INCLUDE_DIR=${PREFIX}/include \
-        -DJPEG_LIBRARY=${PREFIX}/lib/libjpeg.${SHLIB_EXT} \
+        -DJPEG_LIBRARY=${PREFIX}/lib/libjpeg${SHLIB_EXT} \
         ${EXTRA_CMAKE_ARGS}
 
 make
