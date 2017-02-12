@@ -12,7 +12,7 @@ source:
 
 build:
   skip: true  # [win]
-  number: 10
+  number: 11
   detect_binary_files_with_prefix: true
 
 requirements:
