@@ -3,10 +3,8 @@
 EXTRA_CMAKE_ARGS=""
 if [[ `uname` == 'Darwin' ]];
 then
-    export LIBRARY_SEARCH_VAR=DYLD_FALLBACK_LIBRARY_PATH
     EXTRA_CMAKE_ARGS="-DCMAKE_OSX_DEPLOYMENT_TARGET=${CMAKE_OSX_DEPLOYMENT_TARGET}"
 else
-    export LIBRARY_SEARCH_VAR=LD_LIBRARY_PATH
     export CXXFLAGS="-pthread ${CXXFLAGS}"
 fi
 export EXTRA_CMAKE_ARGS
@@ -68,5 +66,5 @@ make
 # For more details see here ( https://llvm.org/bugs/show_bug.cgi?id=21083 ).
 # Also, these tests are very intensive, which makes them challenging to run in CI.
 #eval ${LIBRARY_SEARCH_VAR}=$PREFIX/lib make check
-eval ${LIBRARY_SEARCH_VAR}=$PREFIX/lib make check_python
+make check_python
 make install
