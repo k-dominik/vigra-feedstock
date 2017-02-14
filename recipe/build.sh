@@ -3,21 +3,13 @@
 EXTRA_CMAKE_ARGS=""
 if [[ `uname` == 'Darwin' ]];
 then
-    export LIBRARY_SEARCH_VAR=DYLD_FALLBACK_LIBRARY_PATH
-    export MACOSX_VERSION_MIN="10.7"
-    export CMAKE_OSX_DEPLOYMENT_TARGET="${MACOSX_VERSION_MIN}"
-    export CXXFLAGS="-mmacosx-version-min=${MACOSX_VERSION_MIN}"
-    export CXXFLAGS="${CXXFLAGS} -stdlib=libc++ -std=c++11"
-    export LINKFLAGS="-mmacosx-version-min=${MACOSX_VERSION_MIN}"
-    export LINKFLAGS="${LINKFLAGS} -stdlib=libc++ -std=c++11 -L${LIBRARY_PATH}"
     EXTRA_CMAKE_ARGS="-DCMAKE_OSX_DEPLOYMENT_TARGET=${CMAKE_OSX_DEPLOYMENT_TARGET}"
 else
-    export LIBRARY_SEARCH_VAR=LD_LIBRARY_PATH
-    export CXXFLAGS="-pthread -std=c++11 ${CXXFLAGS}"
+    export CXXFLAGS="-pthread ${CXXFLAGS}"
 fi
 export EXTRA_CMAKE_ARGS
 
-export VIGRA_CXX_FLAGS="${CXXFLAGS}"
+export VIGRA_CXX_FLAGS="${CXXFLAGS} -std=c++11"
 
 # In release mode, we use -O2 because gcc is known to miscompile certain vigra functionality at the O3 level.
 # (This is probably due to inappropriate use of undefined behavior in vigra itself.)
@@ -74,5 +66,5 @@ make
 # For more details see here ( https://llvm.org/bugs/show_bug.cgi?id=21083 ).
 # Also, these tests are very intensive, which makes them challenging to run in CI.
 #eval ${LIBRARY_SEARCH_VAR}=$PREFIX/lib make check
-eval ${LIBRARY_SEARCH_VAR}=$PREFIX/lib make check_python
+make check_python
 make install
