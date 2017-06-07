@@ -12,7 +12,7 @@ source:
 
 build:
   skip: true  # [win]
-  number: 11
+  number: 12
   detect_binary_files_with_prefix: true
 
 requirements:
@@ -26,7 +26,7 @@ requirements:
     - libtiff 4.0.*
     - libpng 1.6*
     - fftw
-    - hdf5 1.8.17|1.8.17.*
+    - hdf5 1.8.18|1.8.18.*
     - boost 1.63.*
     - zlib 1.2.*
     
@@ -37,7 +37,7 @@ requirements:
     - libtiff 4.0.*
     - libpng 1.6*
     - fftw
-    - hdf5 1.8.17|1.8.17.*
+    - hdf5 1.8.18|1.8.18.*
     - boost 1.63.*
     - zlib 1.2.*
 
