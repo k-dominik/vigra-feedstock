@@ -12,7 +12,7 @@ source:
 
 build:
   skip: true  # [win]
-  number: 13
+  number: 14
   detect_binary_files_with_prefix: true
 
 requirements:
@@ -48,6 +48,7 @@ test:
 about:
   home: http://ukoethe.github.io/vigra
   license: MIT
+  license_file: LICENSE.txt
   summary: Generic Programming for Computer Vision
 
 extra:
