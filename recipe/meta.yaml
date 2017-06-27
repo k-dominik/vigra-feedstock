@@ -17,6 +17,13 @@ source:
     ####################################################
     - PR_412.diff
 
+    ####################################################
+    # Fix Windows NMake Python test run                #
+    #                                                  #
+    # xref: https://github.com/ukoethe/vigra/pull/417  #
+    ####################################################
+    - PR_417.diff
+
 build:
   skip: true  # [win and py<35]
   number: 0
