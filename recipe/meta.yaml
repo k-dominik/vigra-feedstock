@@ -9,10 +9,24 @@ source:
   fn: vigra-{{ version_tag }}-src.tar.gz
   url: https://github.com/ukoethe/vigra/archive/{{ version_tag }}.tar.gz
   sha1: 518c7a9ef0e26e39563aeebf22bcee55a7d257c8
+  patches:
+    ####################################################
+    # Workaround for VS 2015                           #
+    #                                                  #
+    # xref: https://github.com/ukoethe/vigra/pull/412  #
+    ####################################################
+    - PR_412.diff
+
+    ####################################################
+    # Fix Windows NMake Python test run                #
+    #                                                  #
+    # xref: https://github.com/ukoethe/vigra/pull/417  #
+    ####################################################
+    - PR_417.diff
 
 build:
-  skip: true  # [win]
-  number: 0
+  skip: true  # [win and py<35]
+  number: 1
   detect_binary_files_with_prefix: true
 
 requirements:
@@ -25,7 +39,7 @@ requirements:
     - jpeg 9*
     - libtiff 4.0.*
     - libpng 1.6*
-    - fftw
+    - fftw                  # [unix]
     - hdf5 1.8.18|1.8.18.*
     - boost 1.64.*
     - zlib 1.2.*
@@ -36,7 +50,7 @@ requirements:
     - jpeg 9*
     - libtiff 4.0.*
     - libpng 1.6*
-    - fftw
+    - fftw                  # [unix]
     - hdf5 1.8.18|1.8.18.*
     - boost 1.64.*
     - zlib 1.2.*
