@@ -43,7 +43,7 @@ requirements:
     - libpng >=1.6.22,<1.6.31
     - fftw
     - hdf5 1.8.18|1.8.18.*
-    - boost 1.64.*
+    - boost 1.65.1
     - zlib 1.2.11
     
   run:
@@ -56,7 +56,7 @@ requirements:
     - libpng >=1.6.22,<1.6.31
     - fftw
     - hdf5 1.8.18|1.8.18.*
-    - boost 1.64.*
+    - boost 1.65.1
     - zlib 1.2.11
 
 test:
