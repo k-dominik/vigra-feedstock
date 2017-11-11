@@ -26,7 +26,7 @@ source:
 
 build:
   skip: true  # [win and py<35]
-  number: 3
+  number: 4
   detect_binary_files_with_prefix: true
 
 requirements:
@@ -39,12 +39,12 @@ requirements:
     - numpy 1.9.*  # [win and py35]
     - numpy 1.11.*  # [win and py36]
     - jpeg 9*
-    - libtiff 4.0.*
-    - libpng 1.6*
+    - libtiff >=4.0.3,<4.0.8
+    - libpng >=1.6.22,<1.6.31
     - fftw
-    - hdf5 1.8.18|1.8.18.*
-    - boost 1.64.*
-    - zlib 1.2.*
+    - hdf5 1.10.1
+    - boost 1.65.1
+    - zlib 1.2.11
     
   run:
     - python
@@ -52,12 +52,12 @@ requirements:
     - numpy >=1.9  # [win and py35]
     - numpy >=1.11  # [win and py36]
     - jpeg 9*
-    - libtiff 4.0.*
-    - libpng 1.6*
+    - libtiff >=4.0.3,<4.0.8
+    - libpng >=1.6.22,<1.6.31
     - fftw
-    - hdf5 1.8.18|1.8.18.*
-    - boost 1.64.*
-    - zlib 1.2.*
+    - hdf5 1.10.1
+    - boost 1.65.1
+    - zlib 1.2.11
 
 test:
   imports:
