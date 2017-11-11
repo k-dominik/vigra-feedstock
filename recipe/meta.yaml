@@ -39,7 +39,7 @@ requirements:
     - numpy 1.9.*  # [win and py35]
     - numpy 1.11.*  # [win and py36]
     - jpeg 9*
-    - libtiff 4.0.*
+    - libtiff >=4.0.3,<4.0.8
     - libpng 1.6*
     - fftw
     - hdf5 1.8.18|1.8.18.*
@@ -52,7 +52,7 @@ requirements:
     - numpy >=1.9  # [win and py35]
     - numpy >=1.11  # [win and py36]
     - jpeg 9*
-    - libtiff 4.0.*
+    - libtiff >=4.0.3,<4.0.8
     - libpng 1.6*
     - fftw
     - hdf5 1.8.18|1.8.18.*
