@@ -44,7 +44,7 @@ requirements:
     - fftw
     - hdf5 1.8.18|1.8.18.*
     - boost 1.64.*
-    - zlib 1.2.*
+    - zlib 1.2.11
     
   run:
     - python
@@ -57,7 +57,7 @@ requirements:
     - fftw
     - hdf5 1.8.18|1.8.18.*
     - boost 1.64.*
-    - zlib 1.2.*
+    - zlib 1.2.11
 
 test:
   imports:
