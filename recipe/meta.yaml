@@ -39,8 +39,8 @@ requirements:
     - numpy 1.9.*   # [win and py35]
     - numpy 1.11.*  # [win and py36]
     - jpeg 9*
-    - libtiff >=4.0.3,<4.0.8
-    - libpng >=1.6.22,<1.6.31
+    - libtiff >=4.0.8,<4.0.10
+    - libpng >=1.6.32,<1.6.35
     - fftw
     - hdf5 1.10.1
     - boost 1.65.1
@@ -52,8 +52,8 @@ requirements:
     - numpy >=1.9   # [win and py35]
     - numpy >=1.11  # [win and py36]
     - jpeg 9*
-    - libtiff >=4.0.3,<4.0.8
-    - libpng >=1.6.22,<1.6.31
+    - libtiff >=4.0.8,<4.0.10
+    - libpng >=1.6.32,<1.6.35
     - fftw
     - hdf5 1.10.1
     - boost 1.65.1
