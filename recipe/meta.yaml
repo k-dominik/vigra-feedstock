@@ -35,8 +35,8 @@ requirements:
     - cmake
     - python
     - nose
-    - numpy 1.8.*  # [not (win and (py35 or py36))]
-    - numpy 1.9.*  # [win and py35]
+    - numpy 1.8.*   # [not (win and (py35 or py36))]
+    - numpy 1.9.*   # [win and py35]
     - numpy 1.11.*  # [win and py36]
     - jpeg 9*
     - libtiff >=4.0.3,<4.0.8
@@ -48,8 +48,8 @@ requirements:
     
   run:
     - python
-    - numpy >=1.8  # [not (win and (py35 or py36))]
-    - numpy >=1.9  # [win and py35]
+    - numpy >=1.8   # [not (win and (py35 or py36))]
+    - numpy >=1.9   # [win and py35]
     - numpy >=1.11  # [win and py36]
     - jpeg 9*
     - libtiff >=4.0.3,<4.0.8
