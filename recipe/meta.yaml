@@ -26,7 +26,7 @@ source:
 
 build:
   skip: true  # [win and py<35]
-  number: 5
+  number: 6
   detect_binary_files_with_prefix: true
 
 requirements:
@@ -43,7 +43,7 @@ requirements:
     - libpng >=1.6.32,<1.6.35
     - fftw
     - hdf5 1.10.1
-    - boost 1.65.1
+    - boost 1.66.0
     - zlib 1.2.11
     
   run:
@@ -56,7 +56,7 @@ requirements:
     - libpng >=1.6.32,<1.6.35
     - fftw
     - hdf5 1.10.1
-    - boost 1.65.1
+    - boost 1.66.0
     - zlib 1.2.11
 
 test:
