@@ -14,14 +14,16 @@ Summary: Generic Programming for Computer Vision
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/vigra-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/vigra-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/vigra-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/vigra-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/vigra-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/vigra-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/vigra-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/vigra-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/vigra-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/vigra-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/vigra-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/vigra-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/vigra/badges/version.svg)](https://anaconda.org/conda-forge/vigra)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/vigra/badges/downloads.svg)](https://anaconda.org/conda-forge/vigra)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-vigra-green.svg)](https://anaconda.org/conda-forge/vigra) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/vigra.svg)](https://anaconda.org/conda-forge/vigra) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/vigra.svg)](https://anaconda.org/conda-forge/vigra) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/vigra.svg)](https://anaconda.org/conda-forge/vigra) |
 
 Installing vigra
 ================

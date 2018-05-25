@@ -26,38 +26,36 @@ source:
 
 build:
   skip: true  # [win and py<35]
-  number: 6
+  number: 7
   detect_binary_files_with_prefix: true
 
 requirements:
   build:
-    - toolchain
+    - {{ compiler("cxx") }}
     - cmake
+
+  host:
     - python
     - nose
-    - numpy 1.8.*   # [not (win and (py35 or py36))]
-    - numpy 1.9.*   # [win and py35]
-    - numpy 1.11.*  # [win and py36]
-    - jpeg 9*
-    - libtiff >=4.0.8,<4.0.10
-    - libpng >=1.6.32,<1.6.35
+    - numpy
+    - jpeg
+    - libtiff
+    - libpng
     - fftw
-    - hdf5 1.10.1
-    - boost 1.66.0
-    - zlib 1.2.11
+    - hdf5
+    - boost
+    - zlib
     
   run:
     - python
-    - numpy >=1.8   # [not (win and (py35 or py36))]
-    - numpy >=1.9   # [win and py35]
-    - numpy >=1.11  # [win and py36]
-    - jpeg 9*
-    - libtiff >=4.0.8,<4.0.10
-    - libpng >=1.6.32,<1.6.35
+    - {{ pin_compatible('numpy') }}
+    - jpeg
+    - libtiff
+    - libpng
     - fftw
-    - hdf5 1.10.1
-    - boost 1.66.0
-    - zlib 1.2.11
+    - hdf5
+    - boost
+    - zlib
 
 test:
   imports:
