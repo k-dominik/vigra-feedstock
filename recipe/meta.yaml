@@ -37,9 +37,7 @@ requirements:
   host:
     - python
     - nose
-    - numpy 1.8.*   # [not (win and (py35 or py36))]
-    - numpy 1.9.*   # [win and py35]
-    - numpy 1.11.*  # [win and py36]
+    - numpy
     - jpeg 9*
     - libtiff >=4.0.8,<4.0.10
     - libpng >=1.6.32,<1.6.35
@@ -50,9 +48,7 @@ requirements:
     
   run:
     - python
-    - numpy >=1.8   # [not (win and (py35 or py36))]
-    - numpy >=1.9   # [win and py35]
-    - numpy >=1.11  # [win and py36]
+    - {{ pin_compatible('numpy') }}
     - jpeg 9*
     - libtiff >=4.0.8,<4.0.10
     - libpng >=1.6.32,<1.6.35
