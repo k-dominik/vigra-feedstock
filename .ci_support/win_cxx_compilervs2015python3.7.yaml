@@ -1,9 +1,13 @@
 boost:
-- 1.66.0
+- 1.67.0
+channel_sources:
+- conda-forge,defaults
+channel_targets:
+- conda-forge main
 cxx_compiler:
-- toolchain_cxx
+- vs2015
 hdf5:
-- 1.10.2
+- 1.10.3
 jpeg:
 - '9'
 libpng:
@@ -11,7 +15,7 @@ libpng:
 libtiff:
 - 4.0.9
 numpy:
-- '1.9'
+- '1.11'
 pin_run_as_build:
   boost:
     max_pin: x.x.x
@@ -24,11 +28,14 @@ pin_run_as_build:
   libtiff:
     max_pin: x
   python:
-    max_pin: x.x
     min_pin: x.x
+    max_pin: x.x
   zlib:
     max_pin: x.x
 python:
-- '3.5'
+- '3.7'
+zip_keys:
+- - python
+  - cxx_compiler
 zlib:
 - '1.2'

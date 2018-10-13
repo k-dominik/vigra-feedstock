@@ -1,9 +1,17 @@
 boost:
-- 1.66.0
+- 1.67.0
+build_number_decrement:
+- '0'
+channel_sources:
+- conda-forge/label/gcc7,defaults
+channel_targets:
+- conda-forge gcc7
 cxx_compiler:
-- toolchain_cxx
+- gxx
+docker_image:
+- conda/c3i-linux-64
 hdf5:
-- 1.10.2
+- 1.10.3
 jpeg:
 - '9'
 libpng:
@@ -24,11 +32,17 @@ pin_run_as_build:
   libtiff:
     max_pin: x
   python:
-    max_pin: x.x
     min_pin: x.x
+    max_pin: x.x
   zlib:
     max_pin: x.x
 python:
 - '2.7'
+zip_keys:
+- - cxx_compiler
+  - channel_sources
+  - channel_targets
+  - docker_image
+  - build_number_decrement
 zlib:
 - '1.2'
