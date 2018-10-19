@@ -10,18 +10,25 @@ source:
   url: https://github.com/ukoethe/vigra/archive/{{ version_tag }}.tar.gz
   sha1: 518c7a9ef0e26e39563aeebf22bcee55a7d257c8
   patches:
-    ####################################################
-    # Workaround for VS 2015                           #
-    #                                                  #
-    # xref: https://github.com/ukoethe/vigra/pull/412  #
-    ####################################################
+    ##########################################################
+    # Workaround for VS 2015                                 #
+    #                                                        #
+    # xref: https://github.com/ukoethe/vigra/pull/412        #
+    ##########################################################
     - PR_412.diff
 
-    ####################################################
-    # Fix Windows NMake Python test run                #
-    #                                                  #
-    # xref: https://github.com/ukoethe/vigra/pull/417  #
-    ####################################################
+    ##########################################################
+    # Fix incorrect template parameter in multi_convolution  #
+    #                                                        #
+    # xref: https://github.com/ukoethe/vigra/pull/415        #
+    ##########################################################
+    - PR_415.diff
+
+    ##########################################################
+    # Fix Windows NMake Python test run                      #
+    #                                                        #
+    # xref: https://github.com/ukoethe/vigra/pull/417        #
+    ##########################################################
     - PR_417.diff
 
 build:
