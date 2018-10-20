@@ -14,7 +14,7 @@ export VIGRA_CXX_FLAGS="${CXXFLAGS} -std=c++11"
 # In release mode, we use -O2 because gcc is known to miscompile certain vigra functionality at the O3 level.
 # (This is probably due to inappropriate use of undefined behavior in vigra itself.)
 export VIGRA_CXX_FLAGS_RELEASE="-O2 -DNDEBUG ${VIGRA_CXX_FLAGS}"
-export VIGRA_LDFLAGS="${CXX_LDFLAGS} -Wl,-rpath,${PREFIX}/lib -L${PREFIX}/lib"
+export VIGRA_LDFLAGS="${LDFLAGS} -Wl,-rpath,${PREFIX}/lib -L${PREFIX}/lib"
 
 # Configure
 mkdir build
