@@ -38,6 +38,13 @@ source:
     ##########################################################
     - PR_451.diff
 
+    ###########################################################################################
+    # Backport patch to update exception declarations                                         #
+    #                                                                                         #
+    # xref: https://github.com/ukoethe/vigra/commit/dc730be49fc8def4304a651fa525e43b7754955e  #
+    ###########################################################################################
+    - fix_except_decl.diff
+
 build:
   skip: true  # [win and py<35]
   number: 1007
