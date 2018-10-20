@@ -7,6 +7,12 @@ then
 else
     export CXXFLAGS="-pthread ${CXXFLAGS}"
 fi
+if [[ ${PY3K} == 1 ]];
+then
+    EXTRA_CMAKE_ARGS="${EXTRA_CMAKE_ARGS} -DPYTHON_LIBRARIES=${PREFIX}/lib/libpython${PY_VER}m${SHLIB_EXT}"
+else
+    EXTRA_CMAKE_ARGS="${EXTRA_CMAKE_ARGS} -DPYTHON_LIBRARIES=${PREFIX}/lib/libpython${PY_VER}${SHLIB_EXT}"
+fi
 export EXTRA_CMAKE_ARGS
 
 if [[ "${cxx_compiler}" == "toolchain_cxx" ]];
