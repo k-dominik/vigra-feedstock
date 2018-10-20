@@ -32,6 +32,13 @@ source:
     - PR_417.diff
 
     ##########################################################
+    # Fix CMake obsolete policy CMP0026 warning              #
+    #                                                        #
+    # xref: https://github.com/ukoethe/vigra/pull/449        #
+    ##########################################################
+    - PR_449.diff
+
+    ##########################################################
     # Handle Python 3.7 PyUnicode_AsUTF8 breaking change     #
     #                                                        #
     # xref: https://github.com/ukoethe/vigra/pull/451        #
