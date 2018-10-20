@@ -9,12 +9,12 @@ else
 fi
 export EXTRA_CMAKE_ARGS
 
-export VIGRA_CXX_FLAGS="${CXXFLAGS} -std=c++11"
+export CXXFLAGS="${CXXFLAGS} -std=c++11"
 
 # In release mode, we use -O2 because gcc is known to miscompile certain vigra functionality at the O3 level.
 # (This is probably due to inappropriate use of undefined behavior in vigra itself.)
-export VIGRA_CXX_FLAGS_RELEASE="-O2 -DNDEBUG ${VIGRA_CXX_FLAGS}"
-export VIGRA_LDFLAGS="${LDFLAGS} -Wl,-rpath,${PREFIX}/lib -L${PREFIX}/lib"
+export CXXFLAGS_RELEASE="-O2 -DNDEBUG ${CXXFLAGS}"
+export LDFLAGS="${LDFLAGS} -Wl,-rpath,${PREFIX}/lib -L${PREFIX}/lib"
 
 # Configure
 mkdir build
@@ -23,11 +23,11 @@ cmake ..\
         -DCMAKE_INSTALL_PREFIX=${PREFIX} \
         -DCMAKE_PREFIX_PATH=${PREFIX} \
 \
-        -DCMAKE_CXX_LINK_FLAGS="${VIGRA_LDFLAGS}" \
-        -DCMAKE_EXE_LINKER_FLAGS="${VIGRA_LDFLAGS}" \
-        -DCMAKE_CXX_FLAGS="${VIGRA_CXX_FLAGS}" \
-        -DCMAKE_CXX_FLAGS_RELEASE="${VIGRA_CXX_FLAGS_RELEASE}" \
-        -DCMAKE_CXX_FLAGS_DEBUG="${VIGRA_CXX_FLAGS}" \
+        -DCMAKE_CXX_LINK_FLAGS="${LDFLAGS}" \
+        -DCMAKE_EXE_LINKER_FLAGS="${LDFLAGS}" \
+        -DCMAKE_CXX_FLAGS="${CXXFLAGS}" \
+        -DCMAKE_CXX_FLAGS_RELEASE="${CXXFLAGS_RELEASE}" \
+        -DCMAKE_CXX_FLAGS_DEBUG="${CXXFLAGS}" \
 \
         -DWITH_VIGRANUMPY=TRUE \
         -DWITH_BOOST_THREAD=1 \
