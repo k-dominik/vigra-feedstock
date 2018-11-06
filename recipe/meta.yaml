@@ -10,23 +10,56 @@ source:
   url: https://github.com/ukoethe/vigra/archive/{{ version_tag }}.tar.gz
   sha1: 518c7a9ef0e26e39563aeebf22bcee55a7d257c8
   patches:
-    ####################################################
-    # Workaround for VS 2015                           #
-    #                                                  #
-    # xref: https://github.com/ukoethe/vigra/pull/412  #
-    ####################################################
+    ##########################################################
+    # Workaround for VS 2015                                 #
+    #                                                        #
+    # xref: https://github.com/ukoethe/vigra/pull/412        #
+    ##########################################################
     - PR_412.diff
 
-    ####################################################
-    # Fix Windows NMake Python test run                #
-    #                                                  #
-    # xref: https://github.com/ukoethe/vigra/pull/417  #
-    ####################################################
+    ##########################################################
+    # Fix incorrect template parameter in multi_convolution  #
+    #                                                        #
+    # xref: https://github.com/ukoethe/vigra/pull/415        #
+    ##########################################################
+    - PR_415.diff
+
+    ##########################################################
+    # Fix Windows NMake Python test run                      #
+    #                                                        #
+    # xref: https://github.com/ukoethe/vigra/pull/417        #
+    ##########################################################
     - PR_417.diff
+
+    ##########################################################
+    # Fix CMake obsolete policy CMP0026 warning              #
+    #                                                        #
+    # xref: https://github.com/ukoethe/vigra/pull/449        #
+    ##########################################################
+    - PR_449.diff
+
+    ##########################################################
+    # Handle Python 3.7 PyUnicode_AsUTF8 breaking change     #
+    #                                                        #
+    # xref: https://github.com/ukoethe/vigra/pull/451        #
+    ##########################################################
+    - PR_451.diff
+
+    ###########################################################################################
+    # Backport patch to update exception declarations                                         #
+    #                                                                                         #
+    # xref: https://github.com/ukoethe/vigra/commit/dc730be49fc8def4304a651fa525e43b7754955e  #
+    ###########################################################################################
+    - fix_except_decl.diff
+
+    #########################################################################
+    # Interpreter is statically linked on macOS so do not use `libpython`.  #
+    #########################################################################
+    - ignore_libpython_macos.diff
 
 build:
   skip: true  # [win and py<35]
-  number: 7
+  number: 1007
   detect_binary_files_with_prefix: true
 
 requirements:
