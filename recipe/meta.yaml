@@ -74,17 +74,19 @@ requirements:
     - jpeg
     - libtiff
     - libpng
+    - openexr
     - fftw
     - hdf5
     - boost
     - zlib
-    
+
   run:
     - python
     - {{ pin_compatible('numpy') }}
     - jpeg
     - libtiff
     - libpng
+    - openexr
     - fftw
     - hdf5
     - boost

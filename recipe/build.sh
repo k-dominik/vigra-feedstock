@@ -1,5 +1,4 @@
 #!/bin/bash
-
 EXTRA_CMAKE_ARGS=""
 if [[ `uname` == 'Darwin' ]];
 then
@@ -38,6 +37,7 @@ cmake ..\
 \
         -DWITH_VIGRANUMPY=TRUE \
         -DWITH_BOOST_THREAD=1 \
+        -DWITH_OPENEXR=1 \
         -DDEPENDENCY_SEARCH_PREFIX=${PREFIX} \
 \
         -DFFTW3F_INCLUDE_DIR=${PREFIX}/include \
