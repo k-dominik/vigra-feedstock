@@ -75,6 +75,7 @@ requirements:
     - libtiff
     - libpng
     - openexr
+    - lemon
     - fftw
     - hdf5
     - boost
@@ -86,7 +87,7 @@ requirements:
     - jpeg
     - libtiff
     - libpng
-    - openexr
+    - lemon
     - fftw
     - hdf5
     - boost
