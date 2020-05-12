@@ -84,14 +84,8 @@ requirements:
   run:
     - python
     - {{ pin_compatible('numpy') }}
-    - jpeg
-    - libtiff
-    - libpng
-    - lemon
-    - fftw
     - hdf5
     - boost
-    - zlib
 
 test:
   imports:
