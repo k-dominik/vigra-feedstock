@@ -59,7 +59,7 @@ source:
 
 build:
   skip: true  # [win and py<35]
-  number: 1013
+  number: 1014
   detect_binary_files_with_prefix: true
 
 requirements:
@@ -107,3 +107,4 @@ extra:
   recipe-maintainers:
     - jakirkham
     - stuarteberg
+    - hmaarrfk
