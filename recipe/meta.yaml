@@ -59,7 +59,7 @@ source:
 
 build:
   skip: true  # [win and py<35]
-  number: 1014
+  number: 1015
   detect_binary_files_with_prefix: true
 
 requirements:
@@ -84,14 +84,8 @@ requirements:
   run:
     - python
     - {{ pin_compatible('numpy') }}
-    - jpeg
-    - libtiff
-    - libpng
-    - lemon
-    - fftw
     - hdf5
     - boost
-    - zlib
 
 test:
   imports:
