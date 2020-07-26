@@ -59,8 +59,12 @@ source:
 
 build:
   skip: true  # [win and py<35]
-  number: 1017
+  number: 1018
   detect_binary_files_with_prefix: true
+  run_exports:
+    # Seems to change ABI between minor versions
+    # https://abi-laboratory.pro/index.php?view=timeline&l=vigra
+    - {{ pin_subpackage('vigra', max_pin='x.x') }}
 
 requirements:
   build:
