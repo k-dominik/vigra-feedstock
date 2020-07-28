@@ -94,7 +94,6 @@ requirements:
   run:
     - python
     - {{ pin_compatible('numpy') }}
-    - hdf5
     - boost
 
 test:
