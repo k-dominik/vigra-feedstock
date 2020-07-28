@@ -59,8 +59,12 @@ source:
 
 build:
   skip: true  # [win and py<35]
-  number: 1017
+  number: 1018
   detect_binary_files_with_prefix: true
+  run_exports:
+    # Seems to change ABI between minor versions
+    # https://abi-laboratory.pro/index.php?view=timeline&l=vigra
+    - {{ pin_subpackage('vigra', max_pin='x.x') }}
 
 requirements:
   build:
@@ -75,7 +79,13 @@ requirements:
     - libtiff
     - libpng
     - openexr
-    - lemon
+    - lemon  # [unix]
+    # On windows, build #2
+    # https://github.com/conda-forge/lemon-feedstock/pull/14
+    # seems to have accidentally built debug libraries
+    # and this is being addressed in build 3
+    # https://github.com/conda-forge/lemon-feedstock/pull/16
+    - lemon 1.3.1=*_1  # [win]
     - fftw
     - hdf5
     - boost
@@ -84,7 +94,6 @@ requirements:
   run:
     - python
     - {{ pin_compatible('numpy') }}
-    - hdf5
     - boost
 
 test:
