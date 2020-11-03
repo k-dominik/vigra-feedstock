@@ -59,7 +59,7 @@ source:
 
 build:
   skip: true  # [win and py<35]
-  number: 1020
+  number: 1021
   detect_binary_files_with_prefix: true
   run_exports:
     # Seems to change ABI between minor versions
@@ -80,12 +80,9 @@ requirements:
     - libpng
     - openexr
     - lemon  # [unix]
-    # On windows, build #2
-    # https://github.com/conda-forge/lemon-feedstock/pull/14
-    # seems to have accidentally built debug libraries
-    # and this is being addressed in build 3
-    # https://github.com/conda-forge/lemon-feedstock/pull/16
-    - lemon 1.3.1=*_1  # [win]
+    # On windows, the first proper shared build is 10
+    # see: https://github.com/conda-forge/lemon-feedstock/pull/18
+    - lemon 1.3.1>=*_3  # [win]
     - fftw
     - hdf5
     - boost
